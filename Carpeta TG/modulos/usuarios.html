@@ -1,154 +1,131 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Usuarios</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, sans-serif;
-}
-
-body{
-    background: color(#532929);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    padding:20px;
-}
-
-.form-container{
-    background:#fff;
-    width:420px;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.2);
-}
-
-.form-container h2{
-    text-align:center;
-    margin-bottom:25px;
-    color:#333;
-}
-
-.input-group{
-    margin-bottom:18px;
-}
-
-.input-group label{
-    display:block;
-    margin-bottom:6px;
-    font-weight:bold;
-    color: #228b22;;
-}
-
-.input-group input,
-.input-group select{
-    width:100%;
-    padding:12px;
-    border:2px solid #ddd;
-    border-radius:8px;
-    outline:none;
-    font-size:15px;
-    transition:0.3s;
-}
-
-
-
-.btn{
-    width:100%;
-    padding:14px;
-    border:none;
-    background:#b5e28b;
-    color:white;
-    font-size:16px;
-    border-radius:8px;
-    cursor:pointer;
-    transition:3s;
-}
-
-
-</style>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <nav class="navbar" role="navigation" aria-label="dropdown navigation">
+        <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+                Tomas
+            </a>
 
-<div class="form-container">
-    <h2>Registro de Usuario</h2>
+            <div class="navbar-dropdown">
+                <a class="navbar-item" href="../index.html">
+                    Inicio
+                </a>
+                <a class="navbar-item" href="menu.html">
+                    Menu
+                </a>
+                <a class="navbar-item" href="quienes_somos.html">
+                    ¿Quienes somos?
+                </a>
+                <hr class="navbar-divider">
+                <div class="navbar-item">
+                    Version 1.0.4
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="box has-background-grey" id="contenedor">
 
-    <form>
+        <h1 class="title is-1">Formulario de usuarios</h1>
 
-        <div class="input-group">
-            <label>Nombre</label>
-            <input type="text" placeholder="Ingrese su nombre">
+        <div class="form">
+            <form>
+
+
+                <div class="field has-addons">
+
+                    <p class="control has-addons">
+                        <input class="input" type="text" placeholder="Nombre del usuario">
+                    </p>
+                </div>
+                <div class="field has-addons">
+
+                    <p class="control has-addons">
+                        <input class="input" type="text" placeholder="Apellido del usuario">
+                    </p>
+                </div>
+
+                <div class="field has-addons">
+
+                    <p class="control has-addons">
+                        <input class="input" type="number" placeholder="Telefono">
+                    </p>
+                </div>
+
+                <div class="field has-addons">
+
+                    <p class="control has-addons">
+                        <input class="input" type="email" placeholder="Correo">
+                    </p>
+                </div>
+
+                <div class="select">
+                            <select>
+                                <option>Soltero</option>
+                                <option>Casado</option>
+                                <option>Divorciado</option>
+                                <option>Otro</option>
+                            </select>
+                </div>
+
+                <div class="field has-addons">
+
+                    <p class="control has-addons">
+                        <input class="input" type="text" placeholder="Direccion">
+                    </p>
+                </div>
+
+                <div class="field has-addons">
+
+                    <p class="control has-addons">
+                        <input class="input" type="text" placeholder="Cargo">
+                    </p>
+                </div>
+
+                <div class="field has-addons">
+
+                    <p class="control has-addons">
+                        <input class="input" type="date" placeholder="Fecha de nacimiento">
+                    </p>
+                </div>
+
+                <div class="field has-addons">
+
+                    <p class="control has-addons">
+                        <input class="input" type="password" placeholder="Contraseña">
+                    </p>
+                </div>
+
+            </form>
         </div>
 
-        <div class="input-group">
-            <label>Apellido</label>
-            <input type="text" placeholder="Ingrese su apellido">
+
+        <div class="field is-grouped is-grouped-centered">
+            <p class="control">
+                <button class="button is-primary">
+                    Enviar
+                </button>
+            </p>
+            <p class="control">
+                <a class="button is-light">
+                    Cancelar
+                </a>
+            </p>
         </div>
 
-        <div class="input-group">
-            <label>Tipo de Documento</label>
-            <select>
-                <option>Seleccione</option>
-                <option>Cédula de Ciudadanía</option>
-                <option>Tarjeta de Identidad</option>
-                <option>Pasaporte</option>
-                <option>Cédula Extranjera</option>
-            </select>
-        </div>
 
-        <div class="input-group">
-            <label>Número de Documento</label>
-            <input type="number" placeholder="Ingrese el número">
-        </div>
-
-        <div class="input-group">
-            <label>Teléfono</label>
-            <input type="tel" placeholder="Ingrese su teléfono">
-        </div>
-
-        <div class="input-group">
-            <label>Correo Electrónico</label>
-            <input type="email" placeholder="Ingrese su correo">
-        </div>
-
-        <div class="input-group">
-            <label>Género</label>
-            <select>
-                <option>Seleccione</option>
-                <option>Masculino</option>
-                <option>Femenino</option>
-                <option>Otro</option>
-            </select>
-        </div>
-
-        <div class="input-group">
-            <label>Cargo</label>
-            <input type="text" placeholder="Ingrese el cargo">
-        </div>
-
-        <div class="input-group">
-            <label>Fecha de Nacimiento</label>
-            <input type="date">
-        </div>
-
-        <div class="input-group">
-            <label>Contraseña</label>
-            <input type="password" placeholder="Ingrese su contraseña">
-        </div>
-
-        <button type="submit" class="btn">Registrar</button>
-
-    </form>
-</div>
+    </div>
 
 </body>
+
 </html>
